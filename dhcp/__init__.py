@@ -1,13 +1,27 @@
 import struct
-import collections
-
-DHCP_TAG_PAD = 0x00
-
-DHCP_TAG_END = 0xff
 
 DHCP_MESSAGE_PARSE_STRING = '!ccccIHHIIII6s10s192s4s'
 
 DHCP_MAGIC_BYTES = b'\x63\x82\x53\x63'
+
+DHCP_TAG_PAD = 0x00  # 0
+DHCP_TAG_END = 0xff  # 255
+
+DHCP_TAG_REQUESTED_IP_ADDRESS = 0x32  # 50
+DHCP_TAG_IP_ADDRESS_LEASE_TIME = 0x33  # 51
+DHCP_TAG_OPTION_OVERLOAD = 0x34  # 52
+DHCP_TAG_OPTION_OVERLOAD_FILE = 0x01  # 1
+DHCP_TAG_OPTION_OVERLOAD_SNAME = 0x02  # 2
+DHCP_TAG_OPTION_OVERLOAD_BOTH = 0x03  # 3
+DHCP_TAG_MESSAGE_TYPE = 0x35  # 53
+DHCP_TAG_MESSAGE_TYPE_DICT = {'DHCPDISCOVER': 0x01,
+                              'DHCPOFFER': 0x02,
+                              'DHCPREQUEST': 0x03,
+                              'DHCPDECLINE': 0x04,
+                              'DHCPACK': 0x05,
+                              'DHCPNAK': 0x06,
+                              'DHCPRELEASE': 0x07,
+                              'DHCPINFORM': 0x08}
 
 
 class DHCPMessage:
