@@ -6,7 +6,7 @@ setup(
     description='Module to provide dhcp features',
     long_description=open('README.rst').read(),
     author='Marco \'don\' Kaulea',
-    author_email='donmarco42@gmail.com',
+    author_email='don@0xbeef.org',
     url='https://github.com/Don42/wild_lantern',
     packages=['dhcp', 'dhcp.client', 'dhcp.server'],
     classifiers=[
